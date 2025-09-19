@@ -249,7 +249,8 @@ USER claude
 
 # Stage 7: Claude tools
 
-COPY docker/.claude .claude.json /home/claude/
+COPY docker/.claude/ /home/claude/.claude
+COPY docker/.claude.json /home/claude/
 
 ENV NPM_CONFIG_PREFIX=/home/claude/.npm-global
 ENV PATH=$PATH:/home/claude/.npm-global/bin
