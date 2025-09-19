@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.1.0...v1.2.0) (2025-09-19)
+
+
+### Bug Fixes
+
+* claude-paths ([1b5ec2c](https://github.com/badal-io/claude-flow-dagger/commit/1b5ec2cd245db41cfc556a1275cb5805442c2b61))
+
 # [1.1.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.0.0...v1.1.0) (2025-09-19)
 
 
