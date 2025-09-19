@@ -116,7 +116,7 @@ Ensures the generated app:
    - Check token permissions for the test repository
 
 2. **Docker Issues**
-   - Pull the latest image: `docker pull ghcr.io/liamhelmer/claude-flow-dagger:latest`
+   - Pull the latest image: `docker pull ghcr.io/badal-io/claude-flow-dagger:latest`
    - Ensure Docker daemon is running
    - Check Docker has sufficient resources
 

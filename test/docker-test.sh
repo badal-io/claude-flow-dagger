@@ -67,7 +67,7 @@ echo ""
 popd
 
 cp ${0%/*}/claude-flow-test.sh ${TEST_DIR}
-docker pull ghcr.io/liamhelmer/claude-flow-dagger:latest || exit 1
+docker pull ghcr.io/badal-io/claude-flow-dagger:latest || exit 1
 
 set -x
 
@@ -81,7 +81,7 @@ echo "Initializing hive-mind..."
 #    -e ANTHROPIC_MODEL="claude-sonnet-4" \
 #    -e DEBUG=true \
 #    --entrypoint /home/claude/.npm-global/bin/claude-flow \
-#    ghcr.io/liamhelmer/claude-flow-dagger:latest \
+#    ghcr.io/badal-io/claude-flow-dagger:latest \
 #    hive-mind init --force --neural-enhanced
 
 echo "build a nodejs hello world app" > ${TEST_DIR}/prompt
@@ -97,7 +97,7 @@ docker run --rm \
     -e DEBUG=true \
     -p 11235:11235 \
     --entrypoint /workspace/claude-flow-test.sh \
-    ghcr.io/liamhelmer/claude-flow-dagger:latest 
+    ghcr.io/badal-io/claude-flow-dagger:latest 
 #2>&1 | tee $TEST_DIR/output.log || exit 1
 
 CLAUDE_OUTPUT=$(cat ${TEST_DIR}/output.log)
@@ -148,7 +148,7 @@ docker run --rm \
     -v "$(pwd):/workspace" \
     -w /workspace \
     -e GITHUB_TOKEN="$GITHUB_TOKEN" \
-    ghcr.io/liamhelmer/claude-flow-dagger:latest \
+    ghcr.io/badal-io/claude-flow-dagger:latest \
     gh pr create \
         --base main \
         --head "$BRANCH_NAME" \
@@ -183,7 +183,7 @@ if [ -f "index.js" ] || [ -f "app.js" ] || [ -f "server.js" ] || [ -f "hello.js"
             docker run --rm \
                 -v "$(pwd):/workspace" \
                 -w /workspace \
-                ghcr.io/liamhelmer/claude-flow-dagger:latest \
+                ghcr.io/badal-io/claude-flow-dagger:latest \
                 npm install
         fi
         
@@ -191,7 +191,7 @@ if [ -f "index.js" ] || [ -f "app.js" ] || [ -f "server.js" ] || [ -f "hello.js"
         OUTPUT=$(docker run --rm \
             -v "$(pwd):/workspace" \
             -w /workspace \
-            ghcr.io/liamhelmer/claude-flow-dagger:latest \
+            ghcr.io/badal-io/claude-flow-dagger:latest \
             node "$MAIN_FILE" 2>&1)
         
         echo "Output: $OUTPUT"

@@ -231,7 +231,7 @@ Timestamp: ${new Date().toISOString()}`;
     // Use GitHub CLI to create PR
     const prContainer = dag
       .container()
-      .from("ghcr.io/liamhelmer/claude-flow-dagger:latest")
+      .from("ghcr.io/badal-io/claude-flow-dagger:latest")
       .withMountedDirectory("/workspace", workspace.directory("/workspace"))
       .withWorkdir("/workspace")
       .withEnvVariable("GITHUB_TOKEN", githubToken);
