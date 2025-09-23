@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.2.0...v1.3.0) (2025-09-23)
+
+
+### Bug Fixes
+
+* comments in runner workflow ([9dd7966](https://github.com/badal-io/claude-flow-dagger/commit/9dd79660293dd19242bfbaa2db2b020e685c1cd2))
+
 # [1.2.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.1.0...v1.2.0) (2025-09-19)
 
 
