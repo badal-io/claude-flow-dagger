@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.4.0...v1.5.0) (2025-09-23)
+
+
+### Bug Fixes
+
+* pagination ([080fff4](https://github.com/badal-io/claude-flow-dagger/commit/080fff47709c2a1a77a97cc0d767bcf768ce0574))
+
 # [1.4.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.3.0...v1.4.0) (2025-09-23)
 
 
