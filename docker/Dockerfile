@@ -234,7 +234,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && mkdir /workspaces && chown claude:claude /workspaces
 
 # Labels
 LABEL maintainer="Claude Flow Team"
@@ -255,14 +255,14 @@ COPY docker/.claude.json /home/claude/
 ENV NPM_CONFIG_PREFIX=/home/claude/.npm-global
 ENV PATH=$PATH:/home/claude/.npm-global/bin
 
+WORKDIR /workspaces
+
 RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @anthropic-ai/claude-code && \
       npm -g install @musistudio/claude-code-router && \
       npm -g install claude-flow@${CLAUDE_FLOW_VERSION} && \
       npm -g install @liamhelmer/claude-flow-ui && \
       ls -la ${NPM_CONFIG_PREFIX}/bin/* && mkdir /workspaces
-
-WORKDIR /workspaces
 
 COPY docker/default-workspace/ /workspaces/workspace/
 
