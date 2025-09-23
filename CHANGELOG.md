@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.5.0...v1.6.0) (2025-09-23)
+
+
+### Bug Fixes
+
+* /workspaces permissions ([078867b](https://github.com/badal-io/claude-flow-dagger/commit/078867b7a1e6ec10c1778d1618332601ed0d5f4d))
+
 # [1.5.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.4.0...v1.5.0) (2025-09-23)
 
 
