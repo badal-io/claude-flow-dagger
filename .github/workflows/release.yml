@@ -132,6 +132,7 @@ jobs:
         with:
           ref: main
 
+# Only use if arm runners aren't available
 #      - name: Set up QEMU
 #        uses: docker/setup-qemu-action@v3
 #        if: env.RUNNER_ARCH != 'ARM64'
