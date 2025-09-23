@@ -1,0 +1,25 @@
+# Claude configuration and data
+!.claude/
+!.claude-code/
+!.claude-cache/
+!.claude-logs/
+!.claude-session/
+!.claude-history/
+!claude-*.log
+!claude-*.tmp
+!*.claude.backup
+!.anthropic/
+
+# Claude Flow specific
+!.claude-flow/
+!claude-flow-data/
+!claude-flow-cache/
+!claude-flow-logs/
+!claude-flow-*.log
+!claude-flow-*.tmp
+!.claude-flow-config/
+!.claude-flow-session/
+!.claude-flow-history/
+!.claude-flow-state/
+!claude-flow-output/
+!claude-flow-artifacts/
