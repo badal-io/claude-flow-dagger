@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.6.0...v1.7.0) (2025-09-24)
+
+
+### Bug Fixes
+
+* mkdir -p ([b25b788](https://github.com/badal-io/claude-flow-dagger/commit/b25b788f2abf48781d0ffa10f61fdd1552105f05))
+
 # [1.6.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.5.0...v1.6.0) (2025-09-23)
 
 
