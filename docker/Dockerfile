@@ -262,7 +262,7 @@ RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @musistudio/claude-code-router && \
       npm -g install claude-flow@${CLAUDE_FLOW_VERSION} && \
       npm -g install @liamhelmer/claude-flow-ui && \
-      ls -la ${NPM_CONFIG_PREFIX}/bin/* && mkdir /workspaces
+      ls -la ${NPM_CONFIG_PREFIX}/bin/*
 
 COPY docker/default-workspace/ /workspaces/workspace/
 
