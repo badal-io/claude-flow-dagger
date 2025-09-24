@@ -234,7 +234,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && mkdir /workspaces && chown claude:claude /workspaces
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && mkdir -p /workspaces && chown claude:claude /workspaces
 
 # Labels
 LABEL maintainer="Claude Flow Team"
