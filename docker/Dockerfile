@@ -266,9 +266,11 @@ RUN npm install -g npm@latest yarn pnpm && \
 
 COPY docker/default-workspace/ /workspaces/workspace/
 
+COPY docker/entrypoint.sh /workspaces/
+
 # Note: MCP servers would be installed here once they become available on npm
 # Currently these packages are not published to npm registry
 
 # Entrypoint
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/workspaces/entrypoint.sh"]
 CMD [""]

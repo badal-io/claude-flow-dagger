@@ -48,12 +48,12 @@ echo "1️⃣ Cloning repository..."
 rsync -av docker/default-workspace/ ${TEST_DIR}/default-workspace/ || exit 1
 pushd "$TEST_DIR"
 git clone "https://${GITHUB_TOKEN}@github.com/badal-io/claude-test-repo.git" workspace
-rsync -av default-workspace/ workspace/
+#rsync -av default-workspace/ workspace/
 
 cd workspace
 
 # Configure git
-git config user.email "claude-flow-bot@example.com"
+git config user.email "claude-flow-integration@badal.io"
 git config user.name "Claude Flow Bot"
 
 # Step 2: Create a new branch
@@ -66,10 +66,9 @@ echo ""
 
 popd
 
-cp ${0%/*}/claude-flow-test.sh ${TEST_DIR}
 docker pull ghcr.io/badal-io/claude-flow-dagger:latest || exit 1
 
-set -x
+[[ -n "DEBUG_CONTAINER" ]] && set -x
 
 echo "Initializing hive-mind..."
 # Initialize hive-mind
@@ -83,8 +82,6 @@ echo "Initializing hive-mind..."
 #    --entrypoint /home/claude/.npm-global/bin/claude-flow \
 #    ghcr.io/badal-io/claude-flow-dagger:latest \
 #    hive-mind init --force --neural-enhanced
-
-echo "build a nodejs hello world app" > ${TEST_DIR}/prompt
 
 echo "spawning hive-mind..."
 # Spawn hive-mind task
