@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.9.0...v1.10.0) (2025-09-26)
+
+
+### Bug Fixes
+
+* tweak docker image ([3d85958](https://github.com/badal-io/claude-flow-dagger/commit/3d8595810b124dda79187ed956d6ca5765526918))
+
 # [1.9.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.8.0...v1.9.0) (2025-09-26)
 
 
