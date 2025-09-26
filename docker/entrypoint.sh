@@ -16,8 +16,6 @@ ccr start &
 
 #tmux -T 256
 
-npm install -g @liamhelmer/claude-flow-ui
-
 env claude-flow-ui "$@"
 
 ccr stop
