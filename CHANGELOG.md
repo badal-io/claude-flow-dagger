@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.8.0...v1.9.0) (2025-09-26)
+
+
+### Bug Fixes
+
+* Removed old test files ([eba8769](https://github.com/badal-io/claude-flow-dagger/commit/eba8769845e0a8222d8e25039a50308f5e66d9a8))
+
 # [1.8.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.7.0...v1.8.0) (2025-09-24)
 
 
