@@ -8,6 +8,9 @@ if [[ "$DEBUG_CONTAINER" == "true" ]] ; then
   env
 fi
 
+export NPM_CONFIG_PREFIX=/home/claude/.npm-global   
+export PATH=$PATH:/home/claude/.npm-global/bin
+
 echo "starting Claude-code-router"
 ccr start &
 
@@ -15,7 +18,7 @@ ccr start &
 
 npm install -g @liamhelmer/claude-flow-ui
 
-env npx @liamhelmer/claude-flow-ui "$@"
+env claude-flow-ui "$@"
 
 ccr stop
 exit 0

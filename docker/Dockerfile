@@ -234,7 +234,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && mkdir -p /workspaces && chown claude:claude /workspaces
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && mkdir -p /workspace && chown claude:claude /workspace
 
 # Labels
 LABEL maintainer="Claude Flow Team"
@@ -243,6 +243,8 @@ LABEL description="Complete Claude Flow development environment with all tools"
 LABEL org.opencontainers.image.source="https://github.com/ruvnet/claude-flow"
 LABEL org.opencontainers.image.version="${CLAUDE_FLOW_VERSION}"
 LABEL org.opencontainers.image.created="2025-08-28"
+
+COPY docker/entrypoint.sh /
 
 # Switch to non-root user
 USER claude
@@ -255,7 +257,7 @@ COPY docker/.claude.json /home/claude/
 ENV NPM_CONFIG_PREFIX=/home/claude/.npm-global
 ENV PATH=$PATH:/home/claude/.npm-global/bin
 
-WORKDIR /workspaces
+WORKDIR /workspace
 
 RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @anthropic-ai/claude-code && \
@@ -264,13 +266,11 @@ RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @liamhelmer/claude-flow-ui && \
       ls -la ${NPM_CONFIG_PREFIX}/bin/*
 
-COPY docker/default-workspace/ /workspaces/workspace/
-
-COPY docker/entrypoint.sh /workspaces/
+COPY docker/default-workspace/ /workspace/
 
 # Note: MCP servers would be installed here once they become available on npm
 # Currently these packages are not published to npm registry
 
 # Entrypoint
-ENTRYPOINT ["/workspaces/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD [""]
