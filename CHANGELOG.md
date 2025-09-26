@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.10.0...v1.11.0) (2025-09-26)
+
+
+### Bug Fixes
+
+* tweak entrypoint.sh ([f5602f9](https://github.com/badal-io/claude-flow-dagger/commit/f5602f95fea67643c1633c2ccc467bb4269dd397))
+
 # [1.10.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.9.0...v1.10.0) (2025-09-26)
 
 
