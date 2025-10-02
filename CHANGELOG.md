@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.11.0...v1.12.0) (2025-10-02)
+
+
+### Bug Fixes
+
+* fixes to dockerfile, new claude-flow version ([8a5b586](https://github.com/badal-io/claude-flow-dagger/commit/8a5b586811ae9785507fbcadc2d94ac4a7a10afd))
+
 # [1.11.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.10.0...v1.11.0) (2025-09-26)
 
 
