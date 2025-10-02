@@ -236,6 +236,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && mkdir -p /workspace && chown claude:claude /workspace
 
+ARG CLAUDE_FLOW_VERSION=v2.5.0-alpha.139
+ENV CLAUDE_FLOW_VERSION=${CLAUDE_FLOW_VERSION}
+
 # Labels
 LABEL maintainer="Claude Flow Team"
 LABEL version="${CLAUDE_FLOW_VERSION}"
@@ -266,7 +269,8 @@ RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @liamhelmer/claude-flow-ui && \
       ls -la ${NPM_CONFIG_PREFIX}/bin/*
 
-COPY docker/default-workspace/ /workspace/
+# After this, we don't install new packages if we can help it, to cut down on launch times and prevent errors
+ENV npm_config_prefer_offline=true
 
 # Note: MCP servers would be installed here once they become available on npm
 # Currently these packages are not published to npm registry
