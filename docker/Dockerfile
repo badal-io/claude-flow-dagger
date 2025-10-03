@@ -1,6 +1,7 @@
 # Multi-stage Dockerfile for Claude Flow with all required tools
 # Optimized for multi-architecture builds (amd64 and arm64)
 
+
 # Stage 1: Base system with essential tools
 FROM ubuntu:24.04 AS base
 
