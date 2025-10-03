@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.12.0...v1.13.0) (2025-10-03)
+
+
+### Bug Fixes
+
+* claude-flow-ui bump ([3145af8](https://github.com/badal-io/claude-flow-dagger/commit/3145af8231080538de2b47d6951524c6e833ec6e))
+
 # [1.12.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.11.0...v1.12.0) (2025-10-02)
 
 
