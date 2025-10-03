@@ -274,6 +274,7 @@ RUN npm install -g npm@latest yarn pnpm && \
 
 # After this, we don't install new packages if we can help it, to cut down on launch times and prevent errors
 ENV npm_config_prefer_offline=true
+ENV npm_config_yes=true
 
 # Note: MCP servers would be installed here once they become available on npm
 # Currently these packages are not published to npm registry
