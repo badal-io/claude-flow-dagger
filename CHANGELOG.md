@@ -1,3 +1,5 @@
+# [1.16.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.15.0...v1.16.0) (2025-10-05)
+
 # [1.15.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.14.0...v1.15.0) (2025-10-03)
 
 # [1.14.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.13.0...v1.14.0) (2025-10-03)
