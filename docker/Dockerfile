@@ -239,8 +239,6 @@ RUN apt-get update && \
 
 ARG CLAUDE_FLOW_VERSION=v2.5.0-alpha.139
 ENV CLAUDE_FLOW_VERSION=${CLAUDE_FLOW_VERSION}
-ARG CLAUDE_FLOW_UI_VERSION=v1.5.0
-ENV CLAUDE_FLOW_UI_VERSION=${CLAUDE_FLOW_UI_VERSION}
 
 # Labels
 LABEL maintainer="Claude Flow Team"
@@ -268,8 +266,11 @@ WORKDIR /workspace
 RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @anthropic-ai/claude-code && \
       npm -g install @musistudio/claude-code-router && \
-      npm -g install claude-flow@${CLAUDE_FLOW_VERSION} && \
-      npm -g install @liamhelmer/claude-flow-ui@${CLAUDE_FLOW_UI_VERSION} && \
+      npm -g install claude-flow@${CLAUDE_FLOW_VERSION}
+
+ARG CLAUDE_FLOW_UI_VERSION=v1.5.1
+ENV CLAUDE_FLOW_UI_VERSION=${CLAUDE_FLOW_UI_VERSION}
+RUN npm -g install @liamhelmer/claude-flow-ui@${CLAUDE_FLOW_UI_VERSION} && \
       ls -la ${NPM_CONFIG_PREFIX}/bin/*
 
 # After this, we don't install new packages if we can help it, to cut down on launch times and prevent errors
