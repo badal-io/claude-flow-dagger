@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.17.0...v1.18.0) (2025-10-05)
+
+
+### Bug Fixes
+
+* added terminal api exponential backoff ([1fe85e3](https://github.com/badal-io/claude-flow-dagger/commit/1fe85e33d05be4c1fccb664af7f03e7aefd3a39d))
+
 # [1.17.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.16.0...v1.17.0) (2025-10-05)
 
 # [1.16.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.15.0...v1.16.0) (2025-10-05)
