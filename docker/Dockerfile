@@ -268,7 +268,7 @@ RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @musistudio/claude-code-router && \
       npm -g install claude-flow@${CLAUDE_FLOW_VERSION}
 
-ARG CLAUDE_FLOW_UI_VERSION=v1.5.4
+ARG CLAUDE_FLOW_UI_VERSION=v1.5.5
 ENV CLAUDE_FLOW_UI_VERSION=${CLAUDE_FLOW_UI_VERSION}
 RUN npm -g install @liamhelmer/claude-flow-ui@${CLAUDE_FLOW_UI_VERSION} && \
       ls -la ${NPM_CONFIG_PREFIX}/bin/*
