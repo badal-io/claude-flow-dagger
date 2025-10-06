@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.18.0...v1.19.0) (2025-10-06)
+
+
+### Bug Fixes
+
+* version bump ([917a623](https://github.com/badal-io/claude-flow-dagger/commit/917a623ea12a143c75edf29b68d0f71fb5b3e9e3))
+
 # [1.18.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.17.0...v1.18.0) (2025-10-05)
 
 
