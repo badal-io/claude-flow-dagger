@@ -1,7 +1,6 @@
 # Multi-stage Dockerfile for Claude Flow with all required tools
 # Optimized for multi-architecture builds (amd64 and arm64)
 
-
 # Stage 1: Base system with essential tools
 FROM ubuntu:24.04 AS base
 
@@ -206,7 +205,7 @@ RUN chown -R claude:claude /workspace
 
 # Configure claude-flow
 RUN mkdir -p /home/claude/.config/claude-flow && \
-    chown -R claude:claude /home/claude/.config
+    chown -R claude:claude /home/claude
 
 # Environment variables
 ENV NODE_ENV=production
@@ -255,8 +254,8 @@ USER claude
 
 # Stage 7: Claude tools
 
-COPY docker/.claude/ /home/claude/.claude
-COPY docker/.claude.json /home/claude/
+COPY --chown claude:claude docker/.claude/ /home/claude/.claude
+COPY --chown claude:claude docker/.claude.json /home/claude/
 
 ENV NPM_CONFIG_PREFIX=/home/claude/.npm-global
 ENV PATH=$PATH:/home/claude/.npm-global/bin
