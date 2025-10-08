@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.20.0...v1.21.0) (2025-10-08)
+
+
+### Bug Fixes
+
+* claude directory permissions ([73469ab](https://github.com/badal-io/claude-flow-dagger/commit/73469ab0b161ad704dc323e2a22c252d85f9d4e5))
+
 # [1.20.0](https://github.com/badal-io/claude-flow-dagger/compare/v1.19.0...v1.20.0) (2025-10-07)
 
 
