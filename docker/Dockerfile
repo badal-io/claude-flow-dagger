@@ -254,8 +254,8 @@ USER claude
 
 # Stage 7: Claude tools
 
-COPY --chown claude:claude docker/.claude/ /home/claude/.claude
-COPY --chown claude:claude docker/.claude.json /home/claude/
+COPY --chown=claude:claude docker/.claude/ /home/claude/.claude
+COPY --chown=claude:claude docker/.claude.json /home/claude/
 
 ENV NPM_CONFIG_PREFIX=/home/claude/.npm-global
 ENV PATH=$PATH:/home/claude/.npm-global/bin
