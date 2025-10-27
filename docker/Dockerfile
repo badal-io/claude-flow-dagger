@@ -265,7 +265,12 @@ WORKDIR /workspace
 RUN npm install -g npm@latest yarn pnpm && \
       npm -g install @anthropic-ai/claude-code && \
       npm -g install @musistudio/claude-code-router && \
-      npm -g install claude-flow@${CLAUDE_FLOW_VERSION}
+      npm -g install claude-flow@${CLAUDE_FLOW_VERSION} && \ 
+      cd /usr/local/bin && \
+      RUN DEVPOD_ARCH=$([ "${TARGETARCH}" = "arm64" ] && echo "arm64" || echo "amd64") && \
+      curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-${DEVPOD_ARCH}" && \
+      chmod 755 devpod
+      
 
 ARG CLAUDE_FLOW_UI_VERSION=v1.5.5
 ENV CLAUDE_FLOW_UI_VERSION=${CLAUDE_FLOW_UI_VERSION}
